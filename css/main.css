@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: rgb(207, 5, 5, 0.2);
+  padding-bottom: 15px;
+  display: flex;
+  position: absolute; /* Faz o header não ocupar espaço no fluxo da página */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px; /* Defina uma altura fixa ou personalizada conforme necessário */
+  z-index: 1; /* Faz o header ir para trás, caso interfira com outros elementos */
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav { 
+  margin-top: 25px;
+  position: absolute;          /* permite posicionar livremente */
+  left: 50%;
+  transform: translateX(-50%); 
+  margin-right: 30px;
+}
+
+li {
+  display: inline;
+  margin-left: 50px;
+  color: aliceblue;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+  transition: all 1s ease; 
+}
+
+.logomain {
+  width: 110px;
+  margin-left: 22.5px;
+  margin-top: 12px;
+}
+
+.social {
+  position: absolute;          
+  top: 18px;                 
+  right: 20px;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: 0.3;                  
+  transition: all 0.5s ease; 
+}
+
+.Redes {
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+  transition: all 0.5s ease-in-out; 
+}
+
+.carrosel {
+  margin-top: 0;
+  background-color: aquamarine;
+  height: 600px;
+  width: 100%;
+}
+
+.carrosel img {
+  width: 100%;
+}
+
+.loogo {
+  height: 100%;
+  width: 100%;
+  position: relative; /* Para que o botão seja posicionado em relação a essa div */
+}
+
+.btn {
+  position: absolute; 
+  top: 100%; 
+  left: 70%;
+ 
+  background-color: rgba(182, 2, 2, 0.7);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
