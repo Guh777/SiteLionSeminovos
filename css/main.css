@@ -12,12 +12,12 @@ header {
   background-color: rgb(207, 5, 5, 0.2);
   padding-bottom: 15px;
   display: flex;
-  position: absolute; /* Faz o header não ocupar espaço no fluxo da página */
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
-  height: 55px; /* Defina uma altura fixa ou personalizada conforme necessário */
-  z-index: 1; /* Faz o header ir para trás, caso interfira com outros elementos */
+  height: 55px; 
+  z-index: 1; 
   overflow: hidden;
 }
 
@@ -27,8 +27,7 @@ nav ul {
 
 nav { 
   margin-top: 25px;
-  position: absolute;          /* permite posicionar livremente */
-  left: 50%;
+  position: absolute;           left: 50%;
   transform: translateX(-50%); 
   margin-right: 30px;
 }
@@ -79,14 +78,11 @@ a {
   width: 100%;
 }
 
-.carrosel img {
-  width: 100%;
-}
 
 .loogo {
   height: 100%;
   width: 100%;
-  position: relative; /* Para que o botão seja posicionado em relação a essa div */
+  position: relative;
 }
 
 .btn {
@@ -99,7 +95,14 @@ a {
   padding: 12px 25px;
   border-radius: 25px;
   font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+ 
+}
+ #africa, #defender  {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; 
+  display: none;
 }
 
