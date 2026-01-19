@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +7,15 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
+
 
 header {
   background-color: rgb(207, 5, 5, 0.2);
   padding-bottom: 15px;
   display: flex;
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,13 +24,15 @@ header {
   overflow: hidden;
 }
 
+
 nav ul {
   list-style: none;
 }
 
 nav { 
   margin-top: 25px;
-  position: absolute;           left: 50%;
+  position: absolute;          
+  left: 50%;
   transform: translateX(-50%); 
   margin-right: 30px;
 }
@@ -42,6 +47,7 @@ li {
   font-weight: bold;
   transition: all 1s ease; 
 }
+
 
 .logomain {
   width: 110px;
@@ -73,11 +79,10 @@ a {
 
 .carrosel {
   margin-top: 0;
-  background-color: aquamarine;
+  background-color: rgb(255, 255, 255);
   height: 600px;
   width: 100%;
 }
-
 
 .loogo {
   height: 100%;
@@ -89,16 +94,15 @@ a {
   position: absolute; 
   top: 100%; 
   left: 70%;
- 
   background-color: rgba(182, 2, 2, 0.7);
   color: white;
   padding: 12px 25px;
   border-radius: 25px;
   font-weight: bold;
- 
 }
- #africa, #defender  {
- position: absolute;
+
+#africa, #defender {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -106,3 +110,254 @@ a {
   display: none;
 }
 
+.car {
+  height: 100%; 
+  width: 100%;
+}
+
+
+.feedackss { 
+  background-color: #d13100;
+  width: 100%;
+  margin-top: 2%;
+  min-height: 200px;  
+  padding: 20px;
+}
+
+
+.feedackss h1 {
+font-size: 100px;
+  text-align: center;
+  color: #333;
+}
+.fotosfeed img {
+  border-radius: 5px;
+  width: 250px;
+  height: 350px;
+  
+}
+.fotosfeed {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  justify-items: center;
+  width: 60%;
+  margin: 0 auto; 
+}
+.fotosfeed2 {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  justify-items: center;
+  width: 50%;
+  margin: 0 auto; 
+  margin-top: 20px;
+}
+.fotosfeed2 img {
+ 
+  border-radius: 5px;
+   width: 100%; 
+  max-width: 240px; 
+  height: auto; 
+
+  
+}
+
+.fotosfeed, .fotosfeed2 {
+  margin-top: 20px;
+}
+.beneficios {
+  margin-top: 8%;
+    padding: 30px 5%;
+    background: #fff;
+  
+}
+
+.beneficios h2 {margin-top: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+  text-transform:  uppercase;
+}
+
+.beneficioGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.beneficioCard {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.benefit-card h3 {
+    margin-bottom: 10px;
+    color: #e63946;
+}
+.veiculos {
+    padding: 80px 10%;
+    background: #fff;
+}
+
+.veiculos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.veiculosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.veiculoCard {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.veiculoCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.veiculoCard .info {
+    padding: 20px;
+}
+
+.veiculoCard .info h3 {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    position: relative;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .logomain {
+    display: block;
+    margin: 15px auto;
+    width: 90px;
+  }
+
+  nav {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  li {
+    display: block;
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .social {
+    position: static;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+ 
+  .carrosel {
+    height: 350px;
+  }
+
+  .btn {
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .feedackss h1 {
+    font-size: 40px;
+  }
+
+  .fotosfeed {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .fotosfeed img {
+    width: 90%;
+    height: auto;
+  }
+
+  .fotosfeed2 {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+ 
+  .beneficios {
+    margin-top: 50px;
+    padding: 20px 5%;
+  }
+
+  .beneficios h2 {
+    font-size: 24px;
+  }
+
+  
+  .veiculos {
+    padding: 40px 5%;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  li {
+    margin-left: 20px;
+    padding: 8px 15px;
+  }
+
+  .carrosel {
+    height: 450px;
+  }
+
+  .feedackss h1 {
+    font-size: 60px;
+  }
+
+  .fotosfeed {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fotosfeed2 {
+    width: 70%;
+  }
+
+  .beneficios h2 {
+    font-size: 28px;
+  }
+
+  .veiculos {
+    padding: 60px 7%;
+  }
+}

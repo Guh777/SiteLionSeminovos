@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Agende uma Visita | Lions Veículos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/visita.css">
+</head>
+
+<body>
+
+
+<header>
+    <a href="./main.html">
+        <img class="logomain" src="./img/logoPagina.png" alt="logoLionsSeminovos">
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="main.html">Página Inicial</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="visita.html">Agende uma visita</a></li>
+        </ul>
+    </nav>
+
+    <div class="social">
+        <a href="https://www.instagram.com/lionsseminovos/" target="_blank">
+            <img src="./img/instagram.png" alt="Instagram" class="Redes">
+        </a>
+        <a href="https://web.facebook.com/lionsseminovos/" target="_blank">
+            <img src="./img/facebook.png" alt="Facebook" class="Redes">
+        </a>
+    </div>
+</header>
+
+
+<section class="titulo">
+    <h1>AGENDE UMA VISITA</h1>
+    <p>Escolha a loja, o dia e o horário</p>
+</section>
+
+
+<section class="visit">
+
+   
+    <div class="visitInfo">
+        <h2 id="lojaNome">Lions Seminovos Nova Iguaçu</h2>
+        <p id="lojaEndereco">📍 Av. Carlos Marques Rollo, 137 - Imperador, Nova Iguaçu - RJ</p>
+        <p id="lojaHorario">
+            🕒 SEG À SEX 09:00 - 22:00<br>
+            SÁBADO 08:00 - 19:00<br>
+            DOMINGO 08:00 - 18:00
+        </p>
+
+        <div class="caixaloja">
+            <img id="lojaFoto" src="./img/loja_lionsseminovos_novaiguacu.webp" alt="Foto da loja">
+        </div>
+    </div>
+
+    <div class="visitForm">
+        <h2>AGENDAMENTO</h2>
+
+        <form id="formAgendamento">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" required>
+
+            <select id="loja" onchange="trocarLoja(this.value)" required>
+                <option value="">Escolha a loja</option>
+                <option value="Ni">Lions Seminovos Nova Iguaçu</option>
+                <option value="Dc">Lions Seminovos Duque de Caxias</option>
+                <option value="Cg">Lions Seminovos Campo Grande</option>
+            </select>
+
+            <select id="tipoVeiculo" required>
+                <option value="">Tipo de veículo</option>
+                <option>Carro</option>
+                <option>Moto</option>
+            </select>
+
+            <input type="date" id="data" required>
+            <input type="time" id="hora" required>
+
+            <textarea id="obs" placeholder="Observações (opcional)"></textarea>
+
+            <button type="submit">Confirmar agendamento</button>
+        </form>
+    </div>
+
+</section>
+
+
+<script>
+const lojas = {
+    Ni: {
+        nome: "Lions Seminovos Nova Iguaçu",
+        endereco: "Av. Carlos Marques Rollo, 137 - Imperador, Nova Iguaçu - RJ",
+        horario: "SEG À SEX 09:00 - 22:00 | SÁBADO 08:00 - 19:00 | DOMINGO 08:00 - 18:00",
+        foto: "./img/loja_lionsseminovos_novaiguacu.webp"
+    },
+    Dc: {
+        nome: "Lions Seminovos Duque de Caxias",
+        endereco: "Rod. Washington Luiz, 1375 - Parque Duque, Duque de Caxias - RJ",
+        horario: "SEG À SEX 09:00 - 22:00 | SÁBADO 08:00 - 19:00 | DOMINGO 09:00 - 18:00",
+        foto: "./img/loja_lionsseminovos_duquedecaxias.webp"
+    },
+    Cg: {
+        nome: "Lions Seminovos Campo Grande",
+        endereco: "Estr. Rio do A, 2211 - Campo Grande, Rio de Janeiro - RJ",
+        horario: "SEG À SEX 09:00 - 22:00 | SÁBADO 08:00 - 19:00 | DOMINGO 08:00 - 18:00",
+        foto: "./img/loja_lionsseminovos_campogrande.webp"
+    }
+};
+
+function trocarLoja(loja) {
+    if (!loja) return;
+
+    document.getElementById("lojaNome").innerText = lojas[loja].nome;
+    document.getElementById("lojaEndereco").innerText = "📍 " + lojas[loja].endereco;
+    document.getElementById("lojaHorario").innerText = "🕒 " + lojas[loja].horario;
+    document.getElementById("lojaFoto").src = lojas[loja].foto;
+}
+
+document.getElementById("formAgendamento").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const telefone = document.getElementById("telefone").value;
+    const lojaKey = document.getElementById("loja").value;
+    const tipoVeiculo = document.getElementById("tipoVeiculo").value;
+    const data = document.getElementById("data").value;
+    const hora = document.getElementById("hora").value;
+    const obs = document.getElementById("obs").value || "Nenhuma";
+
+    const numeroWhatsApp = "5521992522371";
+
+    const mensagem = `
+*AGENDAMENTO DE VISITA*
+
+*Nome:* ${nome}
+*Telefone:* ${telefone}
+*Loja:* ${lojas[lojaKey].nome}
+*Endereço:* ${lojas[lojaKey].endereco}
+*Veículo*: ${tipoVeiculo}
+*Data:* ${data}
+*Horário:* ${hora}
+*Observações:* ${obs}
+    `;
+
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>

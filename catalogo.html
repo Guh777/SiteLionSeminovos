@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Catálogo | Lions Veículos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/catalogo.css"> 
+</head>
+
+<body>
+
+<!-- TOPO -->
+<header>
+    <a href="./main.html"><img class="logomain" src="./img/logoPagina.png" alt="logoLionsSeminovos"></a>
+    <nav>
+        <ul>
+          <a href="main.html">  <li>Página Inicial</li></a>
+          <a href="catalogo.html">  <li>Catálogo</li></a>
+          <a href="visita.html"> <li>Agende uma visita</li></a> 
+        </ul>
+    </nav>
+    <div class="social">
+        <a href="https://www.instagram.com/lionsseminovos/" target="_blank"><img src="./img/instagram.png" alt="Instagram" class="Redes"></a>
+        <a href="https://web.facebook.com/lionsseminovos/" target="_blank"><img src="./img/facebook.png" alt="Facebook" class="Redes"></a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="titulo">
+    <h1>CATÁLOGO</h1>
+    <p>Filtre por tipo de veículo</p>
+</section>
+
+<!-- FILTRO SIMPLES -->
+<section class="filterBar">
+    <button class="filterBtn active" onclick="filterVehicles('all', this)">Todos</button>
+    <button class="filterBtn" onclick="filterVehicles('carro', this)">Carros</button>
+    <button class="filterBtn" onclick="filterVehicles('moto', this)">Motos</button>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="catalog">
+    <div class="catalogGrid">
+        <!-- CARRO -->
+        <div class="catalogCard" data-type="carro">
+            <img src="./img/ford-bronco-sport-grey-1.jpg" >
+            <div class="info">
+                <h3>Ford Bronco Sport</h3>
+                <div class="price">R$850 / mês</div>
+                <a href="#" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+
+        <!-- CARRO -->
+        <div class="catalogCard" data-type="carro">
+            <img src="./img/5ey2oiy6ilj4nyubxiyvmip3a.jpg">
+            <div class="info">
+                <h3>Corolla 2025</h3>
+                <div class="price">R$920 / mês</div>
+                <a href="#" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+
+        <!-- MOTO -->
+        <div class="catalogCard" data-type="moto">
+            <img src="./img/honda-cg-160-2025-5.webp" alt="Honda CG 160">
+            <div class="info">
+                <h3>Honda CG 160</h3>
+                <div class="price">R$480 / mês</div>
+                <a href="#" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+
+        <!-- MOTO -->
+        <div class="catalogCard" data-type="moto">
+            <img src="./img/yamahafazer250.avif" alt="Yamaha Fazer 250">
+            <div class="info">
+                <h3>Yamaha Fazer 250</h3>
+                <div class="price">R$620 / mês</div>
+                <a href="#" class="btn">Ver detalhes</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JS DO FILTRO -->
+<script>
+function filterVehicles(type, btn) {
+    const cards = document.querySelectorAll('.catalogCard');
+    const buttons = document.querySelectorAll('.filterBtn');
+
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    cards.forEach(card => {
+        if (type === 'all' || card.dataset.type === type) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+
+</body>
+</html>

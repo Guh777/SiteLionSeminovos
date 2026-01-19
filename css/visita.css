@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: #af0000cc;
+    color: #333;
+}
+
+
+.titulo {
+    background-image: url('https://wallpapers.com/images/high/solid-red-1440-x-900-background-0y0locedf4lr3fx8.webp');
+    padding: 80px 10%;
+    color: #fff;
+    text-align: center;
+}
+
+.titulo h1 {
+    
+    margin-top: 20px;
+    font-size: 42px;
+}
+.titulo p {
+    margin-top: 30px;
+}
+
+
+.visit {
+    padding: 70px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+
+.visitInfo {
+    background: #fff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.visitInfo  h2 {
+    margin-bottom: 15px;
+}
+
+.visitInfo  p {
+    margin-bottom: 10px;
+}
+
+
+.caixaloja {
+    margin-top: 20px;
+}
+
+.caixaloja img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+.visitForm {
+    background: #fff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.visitForm h2 {
+    margin-bottom: 20px;
+}
+
+.visitForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.visitForm input,
+.visitForm select,
+.visitForm textarea {
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.visitForm textarea {
+    resize: none;
+    height: 100px;
+}
+
+.visitForm button {
+    padding: 14px;
+    background: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header {
+   background-color: rgb(207, 5, 5, 0.2);
+  padding-bottom: 70px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px; 
+  z-index: 1; 
+  overflow: hidden;
+}
+
+
+nav ul {
+  list-style: none;
+}
+
+nav { 
+  margin-top: 25px;
+  position: absolute;          
+  left: 50%;
+  transform: translateX(-50%); 
+  margin-right: 30px;
+}
+
+li {
+  display: inline;
+  margin-left: 50px;
+  color: aliceblue;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+  transition: all 1s ease; 
+}
+
+
+.logomain {
+  width: 110px;
+  margin-left: 22.5px;
+  margin-top: 12px;
+}
+
+.social {
+  position: absolute;          
+  top: 18px;                 
+  right: 20px;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: 0.3;                  
+  transition: all 0.5s ease; 
+}
+
+.Redes {
+  margin-left: 10px;
+  width: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+  transition: all 0.5s ease-in-out; 
+}
+
+@media (max-width: 768px) {
+
+ 
+  header {
+    position: relative;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .logomain {
+    display: block;
+    margin: 15px auto;
+    width: 90px;
+  }
+
+  nav {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  li {
+    display: block;
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .social {
+    position: static;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  
+  .titulo {
+    padding: 120px 5% 50px;
+  }
+
+  .titulo h1 {
+    font-size: 28px;
+  }
+
+  .titulo p {
+    font-size: 14px;
+  }
+
+  
+  .visit {
+    padding: 40px 5%;
+    gap: 25px;
+  }
+
+ 
+  .visitForm {
+    padding: 25px;
+  }
+.visitInfo {
+    display: none;
+}
+
+  .caixaloja img {
+    height: 220px;
+  }
+
+  .visitForm input,
+  .visitForm select,
+  .visitForm textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .visitForm button {
+    font-size: 15px;
+  }
+
+
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  li {
+    margin-left: 20px;
+    padding: 8px 15px;
+  }
+
+  .titulo h1 {
+    font-size: 36px;
+  }
+
+  .visit {
+    padding: 60px 7%;
+  }
+
+  .caixaloja img {
+    height: 300px;
+  }
+  .visitInfo {
+    display: none;
+}
+}
+
