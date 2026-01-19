@@ -1,5 +1,5 @@
 Prazer, me chamo Gustavo Alexandre e busco a vaga de estagiário na Lions Seminovos.
-Desenvolvi este site usando HTML, CSS e JavaScript. A principal funcionalidade que implementei foi um formulário que envia dados para o WhatsApp. Uma melhoria que sugiro seria permitir que, ao selecionar a loja, o número de telefone altere automaticamente para direcionar a mensagem ao funcionário responsável.
+Desenvolvi um site completo utilizando HTML, CSS e JavaScript, implementando funcionalidades dinâmicas com JavaScript. Uma delas envolve a integração com o WhatsApp, e uma melhoria planejada é a alteração automática do número de contato com base na loja selecionada.
 Este projeto me permitiu consolidar minhas habilidades em front-end e criar soluções que melhoram a experiência do usuário.
 
 Para rodar o projeto localmente, siga os passos abaixo:
@@ -23,3 +23,6 @@ cd SiteLionSeminovos
 5.Abra o site no navegador
 Para visualizar o site, use o seguinte comando:
 start main.html
+
+
+Caso eu não seja aprovado para a vaga, poderia me informar o que posso melhorar?
